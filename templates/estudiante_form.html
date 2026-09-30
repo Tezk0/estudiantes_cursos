@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Estudiante</title>
+</head>
+<body>
+    <h1>Nuevo Estudiante</h1>
+    <form action="/Crear_estudiante" method="post">
+        <label for="curso">Curso: </label>
+        <select name="curso" id="">
+        {% for curso in cursos %}
+            <option value="{{ curso.id }}">
+                {{ restaurante.nombre }}
+            </option>
+        {% endfor %}
+        </select><br>
+        <label for="nombre">Nombre: </label>
+        <input type="text" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" name="nombre"><br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')" name="apellido"><br>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad"><br>
+        <input type="submit" value="Crear">
+    </form>
+    <a href="/">Inicio</a>
+</body>
+</html>
