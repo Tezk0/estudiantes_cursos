@@ -1,6 +1,7 @@
-.div_uno{
+.div_grande{
     display: flex;
+    padding: auto;
 }
-.div_dos{
-    display: flex;
+.div_uno{
+    margin-right: 100px;
 }

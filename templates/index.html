@@ -7,25 +7,27 @@
     <title>Cursos</title>
 </head>
 <body>
-    <div class="div_uno">
-        <h1>Nuevo Curso</h1>
-        <form action="/Crear_curso" method="post">
-            <label for="nombre_curso">Nombre: </label>
-            <input type="text" name="nombre_curso" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')">
-        </form>
-    </div>
-    <div class="div_dos">
-        <h1>Todos los cursos</h1>
-        <table>
-            <thead>
-                <th></th>
-            </thead>
-            <tbody>
-            {% for curso in cursos %}
-                <td>{{ curso.nombre }}</td>
-            {% endfor %}
-            </tbody>
-        </table>
+    <div class="div_grande">
+        <div class="div_uno">
+            <h1>Nuevo Curso</h1>
+            <form action="/Crear_curso" method="post">
+                <label for="nombre_curso">Nombre: </label>
+                <input type="text" name="nombre_curso" oninput="this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '')">
+            </form>
+        </div>
+        <div class="div_dos">
+            <h1>Todos los cursos</h1>
+            <table>
+                <thead>
+                    <th></th>
+                </thead>
+                <tbody>
+                {% for curso in cursos %}
+                    <td>{{ curso.nombre }}</td>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
